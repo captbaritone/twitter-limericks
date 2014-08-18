@@ -1,7 +1,7 @@
 import re
 
-def sanitize(str):
-    '''Convert a tweet string into a space delineated list of words'''
+def normalize(str):
+    '''Convert a string into a space delineated list of capitalized words'''
     str = re.sub(r'([a-z])([A-Z])', r'\1 \2', str)
     str = str.replace('@', 'at ')
     str = str.replace('#', 'hash tag ')
