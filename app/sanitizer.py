@@ -7,6 +7,7 @@ def sanitize(str):
     str = str.replace('@', 'at ')
     str = str.replace('#', 'hash tag ')
     str = re.sub(r'\s+', ' ', str)
-    str = re.sub('[^a-z ]', '', str)
+    str = re.sub(r' $', '', str)
+    str = re.sub(r'[^a-z ]', '', str)
     return str
 
